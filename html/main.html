@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="../js/require.js"></script>
+    <script src="../js/main.js"></script>
+
+    <!--<script src="../js/requireAvalon.js"></script>-->
+
+</head>
+<body>
+<!--
+使用requireJs的好处
+1.  防止js加载阻塞页面渲染
+2.  使用程序调用的方式加载js，防出现如下丑陋的场景
+-->
+<div>
+    <h2>调用jquery</h2>
+</div>
+
+<div ms-controller="mainCtrl">
+
+    <p>{{name}}不会变</p>
+    <p>{{old}}不会变</p>
+    <p>{{id}}不会变</p>
+    <br>
+    <a href="#!/my">我的</a>
+    <a href="#!/list">商品列表</a>
+    <a href="#/order">订单</a>
+
+    <div ms-include-src="currentHtml">  <!-- ms-include-src用来嵌套其他页面 -->
+    </div>
+
+</div>
+
+</body>
+</html>
